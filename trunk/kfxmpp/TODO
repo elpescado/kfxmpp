@@ -1,0 +1,9 @@
+* Update tests
+* Clean up code
+* Add support for DIGEST-MD5 SASL mechanism
+* Add support for jabber:iq:auth aurhorization
+* Add support for legacy Jabber protocol
+* Write some docs
+* Resource binding
+* Finish API (references, add some callbacks to KfxmppSession)
+* High-level API

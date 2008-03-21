@@ -1,0 +1,36 @@
+kfxmpp hacking guide
+--------------------
+
+general guidelines
+------------------
+* kfxmpp code aims to be clean and readable.
+* each function, global variable etc. MUST be documented with Doxygen
+  (including all parameters, return values etc)
+* above that, normal comments are also welcome
+
+code style
+----------
+* indents are done with tabs
+* no newline before opening brackets (with exception for functions)
+* type names are capitalized
+* function names are lowercase, words separated with underscore
+* macros, enumerations etc. are in uppercase, words separated by underscore
+* public symbols are prefixed with 'kfxmpp' (+ see 3 above rules)
+* all other symbols are declared static
+* some sample:
+
+/**
+ * \brief Do something
+ * \param foo A foo object
+ * \param bar A bar factor
+ * \return A very sophisticated factor
+ **/
+int kfxmpp_foo_do_something (KfxmppFoo *foo, int bar)
+{
+	int ret = very_sophisticated_function (bar);
+	if (ret < 0) {
+		/* Something is going wrong */
+	}
+	return ret;
+}
+

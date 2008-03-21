@@ -1,0 +1,49 @@
+2006-02-10	el.pescado
+
+	- Commited message.c
+
+2006-02-06	el.pescado
+
+	- Improved StreamParser
+
+2006-02-03	el.pescado
+
+	- Added ping-pong
+	- Improved error handling
+
+2006-02-01	el.pescado
+
+	- Added timeout for connecting to server
+
+2006-01-30	el.pescado
+
+	- Minor updates
+	- kfxmpp-send now is tested to work with Google Talk! server:-)
+
+2006-01-20	el.pescado
+
+	- Updated kfxmpp-senf application
+
+2006-01-19	el.pescado
+
+	- Added simple kfxmpp-send application
+
+2005-08-22	el.pescado
+
+	- Added support for Non-SASL authentication (JEP-0078)
+	- Updated tests
+
+2005-08-21	el.pescado
+
+	- Added kfxmpp_session_set_disconnect_callback
+	- Updated some tests
+
+2005-08-19	el.pescado
+
+	- Clean up code
+	- Added kfxmpp_session_connect_ok and kfxmpp_session_connect_failed
+	- Removed unnecessary files from repository
+
+2005-08-18	el.pescado
+
+	- Initial SVN import
