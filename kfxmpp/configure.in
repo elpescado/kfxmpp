@@ -1,0 +1,36 @@
+#
+# kfxmpp XMPP/Jabber library
+# --------------------------
+#
+# (c) 2005 Przemysław Sitek
+
+AC_INIT(configure.in)
+
+AM_CONFIG_HEADER(config.h)
+
+AM_INIT_AUTOMAKE(kfxmpp, 0.1)
+
+AM_MAINTAINER_MODE
+
+AC_ISC_POSIX
+AC_PROG_CC
+AC_PROG_CC_STDC
+AM_PROG_LIBTOOL
+
+# Versions of required libraries
+GLIB_REQUIRED=2.6
+GNUTLS_REQUIRED=1.2
+GNET_REQUIRED=2.0
+LIBXML_REQUIRED=2.6
+
+PKG_CHECK_MODULES(PACKAGE, glib-2.0 >= $GLIB_REQUIRED gnutls >= $GNUTLS_REQUIRED gnet-2.0 >= $GNET_REQUIRED libxml-2.0 >= $LIBXML_REQUIRED)
+
+AC_DEFINE(HAVE_GNUTLS, 1, [whether to use GnuTSL support.])
+AC_DEFINE(DEBUG, 1, [Enable extra debug])
+
+AC_OUTPUT([
+	Makefile
+	kfxmpp/Makefile
+	tests/Makefile
+	utils/Makefile
+	kfxmpp-1.0.pc])

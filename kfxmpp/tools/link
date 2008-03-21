@@ -1,0 +1,2 @@
+#!/bin/sh
+gcc -Wall -g `pkg-config --libs libxml-2.0 gnet-2.0 gnutls libxml-2.0` $@
