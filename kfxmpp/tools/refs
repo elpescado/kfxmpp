@@ -1,0 +1,25 @@
+#!/bin/sh
+
+echo "/**"
+echo " * \\brief Add a reference to $1"
+echo " **/"
+echo "$1* $2""_ref ($1 *self)"
+echo "{"
+echo "	g_return_val_if_fail (self, NULL);"
+echo "	self->ref_count++;"
+echo "	return self;"
+echo "}"
+echo
+echo
+echo "/**"
+echo " * \\brief Remove a reference from $1"
+echo " *"
+echo " * Object will be deleted when reference count reaches 0"
+echo " **/"
+echo "void $2""_unref ($1 *self)"
+echo "{"
+echo "	g_return_if_fail (self);"
+echo "	self->ref_count--;"
+echo "	if (self->ref_count == 0)"
+echo "		$2""_free (self);"
+echo "}"

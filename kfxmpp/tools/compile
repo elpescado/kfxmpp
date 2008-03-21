@@ -1,0 +1,2 @@
+#!/bin/sh
+gcc -c -g -Wall -I../ `pkg-config --cflags libxml-2.0 gnet-2.0 gnutls libxml-2.0` -DHAVE_GNUTLS $1

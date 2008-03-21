@@ -1,0 +1,17 @@
+<?xml version='1.0'?>
+<stream:stream
+          to='example.com'
+          xmlns='jabber:client'
+          xmlns:stream='http://etherx.jabber.org/streams'
+	  id='bubu'
+          version='1.0'>
+  <kf:message from='juliet@example.com'
+            to='romeo@example.net'
+            xml:lang='en'
+	    xmlns:kf="kfxmpp">
+    <body>Art thou not Romeo, and a Montague?</body>
+  </kf:message>
+  <presence>
+  	<show>xa</show>
+  </presence>
+</stream:stream>

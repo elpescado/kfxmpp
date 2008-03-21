@@ -1,0 +1,13 @@
+OBJECTS=event.o  kfxmpp.o  session.o  streamparser.o stanza.o sasl.o
+
+.c.o:
+	./compile $<
+
+test-session: $(OBJECTS) test-session.o
+	./link -o test-session $(OBJECTS) test-session.o
+
+test-event: $(OBJECTS) test-event.o
+	./link -o test-event $(OBJECTS) test-event.o
+
+test-stanza: $(OBJECTS) test-stanza.o
+	./link -o test-stanza $(OBJECTS) test-stanza.o
