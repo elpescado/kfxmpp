@@ -1,0 +1,1 @@
+kfxmpp is a simple library to communicate over XMPP/Jabber protocol
